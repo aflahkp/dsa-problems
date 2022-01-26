@@ -7,11 +7,8 @@ var map = {};
 
 var climbStairs = function(n) {
     
-  if(n == 1){
-      return 1;
-  }
-  if(n == 2){
-      return 2;
+  if(n < 4){
+      return n;
   }
     if(map[n]){
         return map[n];
