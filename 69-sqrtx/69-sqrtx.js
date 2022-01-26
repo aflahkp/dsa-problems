@@ -18,14 +18,14 @@ var mySqrt = function(x) {
         if(square == x){
             return pointer;
         }
-        else if(square < x){
-            if(x < adjSquare){
+        else if(square > x){
+            end = pointer
+        }
+        else{
+             if(x < adjSquare){
                return pointer
             }
             start = pointer
-        }
-        else{
-            end = pointer
         }
     }
 };
