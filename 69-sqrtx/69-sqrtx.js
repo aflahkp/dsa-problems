@@ -8,7 +8,7 @@ var mySqrt = function(x) {
     }
     
     var start = 0;
-    var end = x
+    var end = (x/2)+1
     
     while(start<= end){
         var pointer = Math.floor((start + end)/2);
