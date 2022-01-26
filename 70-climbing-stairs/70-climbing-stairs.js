@@ -14,8 +14,7 @@ var climbStairs = function(n) {
         return map[n];
     }
     else{
-        const solution = climbStairs(n-1)+ climbStairs(n-2);
-        map[n] = solution;
-        return solution;
+        map[n] = climbStairs(n-1)+ climbStairs(n-2);
+        return map[n];
     }
 };
