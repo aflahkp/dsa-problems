@@ -10,7 +10,6 @@ var countStudents = function(students, sandwiches) {
     var index = 0;
     
     while(q.length>0){ 
-        console.log(q,sandwiches)
         if(q[0] == sandwiches[0]){
             sandwiches.shift(0);
             q.shift(0)
