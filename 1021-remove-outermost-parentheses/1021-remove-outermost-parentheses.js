@@ -18,20 +18,14 @@ var removeOuterParentheses = function(s) {
         else{
            if(stack.length == 1){
             if(stack.pop() < i-1){
-                temp = temp.slice(1,temp.length-1)
-                 console.log(temp)
+                temp = temp.slice(1,temp.length-1);
                 while(temp.length){
                     result+=temp.shift()
                 }
-            }
-               else{
-                   temp = [];
-               }
+            } else{temp = []}
                    
            }
-            else{
-                stack.pop()    
-            }
+            else{ stack.pop()  }
         }
 
     }
