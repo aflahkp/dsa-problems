@@ -6,27 +6,26 @@
 var countStudents = function(students, sandwiches) {
     var counter = 0;
     var previous = students[0];
-    var q = students;
     var index = 0;
     
-    while(q.length>0){ 
-        if(q[0] == sandwiches[0]){
+    while(students.length>0){ 
+        if(students[0] == sandwiches[0]){
             sandwiches.shift(0);
-            q.shift(0)
+            students.shift(0)
             counter = 0;
         }else{
-            if(previous == q[0]){
+            if(previous == students[0]){
              counter++;
-             if(counter == q.length){
+             if(counter == students.length){
                  break;
              }
             }else{
                 counter = 0;
             }
-            q.push(q.shift(0))
+            students.push(students.shift(0))
 
         }
-        previous = q[0];
+        previous = students[0];
     }
-    return q.length;
+    return students.length;
 };
