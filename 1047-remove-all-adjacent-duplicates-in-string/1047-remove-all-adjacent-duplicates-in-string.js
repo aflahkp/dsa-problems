@@ -3,7 +3,6 @@
  * @return {string}
  */
 var removeDuplicates = function(s) {
-    var i = 0;
     var stack = [];
     for(let i of s){
         if(stack.slice(-1) == i){
@@ -12,7 +11,6 @@ var removeDuplicates = function(s) {
         else{
             stack.push(i)
         }
-        i++;
     }
     return stack.join('');
 };
