@@ -20,7 +20,6 @@ var findKthLargest = function(nums, k) {
         
        }
        [nums[p],nums[r]] = [nums[r],nums[p]]
-        console.log(p,ki,pivot,nums[0])
        
        if(p>ki) return quickSelect(l,p-1)
        else if(p<ki) return quickSelect(p+1,r)
