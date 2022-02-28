@@ -19,7 +19,8 @@ var letterCombinations = function(digits) {
     }
     
     var prepareComb = (acc, curr) => {
-        for(let c of keys[digits[curr]]){
+        var digit = digits[curr];
+        for(let c of keys[digit]){
             acc.push(c);
             if(acc.length == digits.length){
                 combs.push(acc.join(""))
