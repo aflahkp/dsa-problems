@@ -1,20 +1,19 @@
-/**
- * @param {number[]} height
- * @return {number}
- */
-var maxArea = function(height) {
-    const myHashmap = new Map();
-    var l = 0;
-    var r = height.length -1;
-    var maxVolume = -1;
-    
-    while(r>l){
-        maxVolume = Math.max(maxVolume, (r-l)*Math.min(height[r],height[l]));
-        if(height[r] > height[l]){
-            l++;
-        }else{
-            r--;
+class Solution {
+    fun maxArea(height: IntArray): Int {
+        var maxVolume: Int = 0;
+        var l: Int = 0;
+        var r: Int = height.size - 1;
+        
+        while(r>l){
+            maxVolume = maxOf(maxVolume, (r-l)*(minOf(height.get(l),height.get(r))))
+            if(height.get(l)> height.get(r)){
+                r--;
+            }
+            else{
+                l++;
+            }
         }
+                
+        return maxVolume;
     }
-    return maxVolume;
-};
+}
