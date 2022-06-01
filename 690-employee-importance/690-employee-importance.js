@@ -13,17 +13,17 @@
  * @return {number}
  */
 var GetImportance = function(employees, id) {
-    var map = new Map();
+    const map = new Map();
     
-    for(let e of employees){
+    for(const e of employees){
         map.set(e.id,{importance:e.importance,subordinates:e.subordinates});
     }
     
-    var q = [id]
-    var result = 0;
+    const q = [id]
+    let result = 0;
     
     while(q.length>0){
-        let empId = q.pop();
+        const empId = q.pop();
         result+=map.get(empId).importance;
         q.push(...(map.get(empId).subordinates));
     }
