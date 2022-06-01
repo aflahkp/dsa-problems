@@ -15,8 +15,8 @@
 var GetImportance = function(employees, id) {
     var map = new Map();
     
-    for(let {id,importance, subordinates} of employees){
-        map.set(id,{importance,subordinates});
+    for(let e of employees){
+        map.set(e.id,{importance:e.importance,subordinates:e.subordinates});
     }
     
     var q = [id]
