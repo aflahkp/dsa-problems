@@ -15,10 +15,8 @@ var lengthOfLongestSubstring = function(s) {
         let char = s[r];
         if(map.has(char)){
             l=Math.max(l,map.get(char)+1);
-            // console.log(l,r,map,char)
         }
         maxLen = Math.max(maxLen,r-l+1)
-        // console.log(l,r,maxLen,map)
         map.set(char,r)
         r++;
         
