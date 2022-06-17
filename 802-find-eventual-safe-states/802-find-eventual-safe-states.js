@@ -3,11 +3,11 @@
  * @return {number[]}
  */
 var eventualSafeNodes = function(graph) {
-    var n = graph.length;
-    var result = [];
-    var safe = new Map();
+    const n = graph.length;
+    const result = [];
+    const safe = new Map();
     
-    var dfs = (ind) => {
+    const dfs = (ind) => {
         if(safe.has(ind)){
             return safe.get(ind);
         }
