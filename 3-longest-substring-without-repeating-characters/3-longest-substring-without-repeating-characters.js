@@ -3,7 +3,7 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function(s) {
-    if(s.length==0) return 0;
+    if(s.length<2) return s.length;
     let maxLen = 1;
     let map = new Map();
     map.set(s[0],0)
